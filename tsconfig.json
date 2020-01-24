@@ -14,7 +14,11 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "importHelpers": true,
-    "removeComments": true
+    "removeComments": true,
+    "baseUrl": ".",
+    "paths": {
+      "atoms": ["./components/atoms"]
+    }
   },
   "exclude": ["node_modules"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]

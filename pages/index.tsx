@@ -1,6 +1,10 @@
 import { NextPage } from "next";
 
-const Home: NextPage<{ userAgent: string }> = ({ userAgent }) => (
+type Props = {
+  userAgent: string;
+};
+
+const Home: NextPage<Props> = ({ userAgent }) => (
   <>
     <h1>Hello world! - user agent: {userAgent}</h1>
     <p>Some text</p>

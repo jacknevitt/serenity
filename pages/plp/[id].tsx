@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import { Button } from "atoms";
 
 type Props = {
   id: string | string[];
@@ -7,6 +8,7 @@ type Props = {
 const ProductListingPage: NextPage<Props> = ({ id }) => (
   <>
     <h1>{id}</h1>
+    <Button>Click</Button>
   </>
 );
 
