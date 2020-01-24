@@ -1,8 +1,8 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react';
+import styled from 'styled-components';
 
 const StyledButton = styled.button`
-  background-color: ${({ theme }) => theme.colors.primary};
+  background-color: ${({ theme }): string => theme.colors.primary};
   color: white;
   border-radius: 0px;
   border: none;
@@ -12,10 +12,11 @@ const StyledButton = styled.button`
 `;
 
 type Props = {
+  children: React.ReactNode;
   disabled?: boolean;
 };
 
-const Button: React.FunctionComponent<Props> = ({ children, disabled }) => (
+const Button: React.FunctionComponent<Props> = ({ children, disabled }: Props) => (
   <StyledButton type="button" disabled={disabled}>
     {children}
   </StyledButton>
