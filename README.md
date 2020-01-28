@@ -1,6 +1,4 @@
-# Welcome to the future
-
-Please drink responsibly
+# Welcome aboard Serenity
 
 ## Checklist
 
@@ -9,10 +7,16 @@ Please drink responsibly
 - TypeScript ✅
 - Hot Reloading ✅
 - Styled Components ✅
+- Prettier ✅
+- ESLint ✅
+- Jest + Enzyme
+- Storybook ([React-TypeScript-Storybook](https://medium.com/@dandobusiness/setting-up-a-react-typescript-storybook-project-5e4e9f540568) requires some Webpack hacking)
+- Cypress
 - Routing 🤷‍♀️
 - Stores URLs 🤷‍♀️
 - Apollo
-- Prettier
-- Storybook
-- Jest + Enzyme
-- Cypress
+
+## Optional Extras
+
+- [Custom Error Page](https://nextjs.org/docs/advanced-features/custom-error-page) (Will need designs)
+- [PWA Support](https://nextjs.org/features/progressive-web-apps#offline-support)

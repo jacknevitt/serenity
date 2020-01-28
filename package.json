@@ -4,6 +4,11 @@
   "description": "A clean start",
   "author": "MADE.COM",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jacknevitt/serenity.git"
+  },
+  "license": "UNLICENSED",
   "scripts": {
     "dev": "next",
     "build": "next build",
