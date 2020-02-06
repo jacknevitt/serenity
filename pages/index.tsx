@@ -1,14 +1,16 @@
 import { NextPage } from 'next';
+import Layout from '../components/Layout/Layout';
 
 type Props = {
   userAgent: string;
 };
 
 const Home: NextPage<Props> = ({ userAgent }: Props) => (
-  <>
-    <h1>Hello world! - user agent: {userAgent}</h1>
-    <p>Some text</p>
-  </>
+  <Layout>
+    <h1>Home Page</h1>
+    <p>Work in progress</p>
+    <p>{userAgent}</p>
+  </Layout>
 );
 
 Home.getInitialProps = async ({ req }): Promise<Props> => {
