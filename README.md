@@ -1,6 +1,6 @@
 # Welcome aboard Serenity
 
-1. [Prerequisites](#prerequesites)
+1. [Prerequisites](#prerequisites)
 2. [Setup](#setup)
 3. [Scripts](#scripts)
 
