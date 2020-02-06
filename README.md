@@ -1,23 +1,43 @@
 # Welcome aboard Serenity
 
-## Checklist
+1. [Prerequisites](#prerequesites)
+2. [Setup](#setup)
+3. [Scripts](#scripts)
 
-- Nextjs ✅
-- React ✅
-- TypeScript ✅
-- Hot Reloading ✅
-- Styled Components ✅
-- Prettier ✅
-- ESLint ✅
-- Jest + Enzyme ✅
-- Husky Pre-push Test Hook ✅
-- Storybook ([React-TypeScript-Storybook](https://medium.com/@dandobusiness/setting-up-a-react-typescript-storybook-project-5e4e9f540568) requires some Webpack hacking)
-- Cypress
-- Routing 🤷‍♀️
-- Stores URLs 🤷‍♀️
-- Apollo
+## Prerequisites
 
-## Optional Extras
+To get this bird in the air you will need
 
-- [Custom Error Page](https://nextjs.org/docs/advanced-features/custom-error-page) (Will need designs)
-- [PWA Support](https://nextjs.org/features/progressive-web-apps#offline-support)
+- Windows/MacOS
+- Nodejs
+- npm
+
+## Setup
+
+1. Clone this repo
+2. Navigate to this folder in your terminal
+3. Run `npm install`
+4. Wait for packages to install
+5. Run [`npm run dev`](#dev)
+
+## Scripts
+
+### `dev`
+
+Fire up the engines in development mode
+
+### `build`
+
+Build the project ready for deployment
+
+### `start`
+
+Fire up the built app from the above command
+
+### `test`
+
+Make sure this ship is fit to fly
+
+### `cypress:open`
+
+Run acceptance tests to keep things shiny
