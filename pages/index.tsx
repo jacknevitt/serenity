@@ -30,7 +30,7 @@ type Props = {
 };
 
 const TestApollo: React.FC = () => {
-  const { loading, error, data } = useQuery(QUERY);
+  const { loading, error, data } = useQuery(QUERY, { ssr: true });
   if (loading) return <pre>{'Loading…'}</pre>;
   if (error) return <pre>{error.message}</pre>;
   return <pre>{JSON.stringify(data)}</pre>;
