@@ -1,8 +1,8 @@
 {
-  "name": "made-serenity",
+  "name": "serenity",
   "version": "0.0.0",
   "description": "A clean start",
-  "author": "MADE.COM",
+  "author": "Jack Nevitt",
   "main": "index.js",
   "repository": {
     "type": "git",
