@@ -1,5 +1,4 @@
 import App from 'next/app';
-import React from 'react';
 import { ThemeProvider } from 'styled-components';
 
 const theme = {
@@ -9,7 +8,7 @@ const theme = {
 };
 
 export default class MyApp extends App {
-  render() {
+  render(): JSX.Element {
     const { Component, pageProps } = this.props;
     return (
       <ThemeProvider theme={theme}>
