@@ -1,10 +1,17 @@
 import React, { ReactNode } from 'react';
-import App from 'next/app';
+import App, { AppContext } from 'next/app';
 import { ApolloProvider } from '@apollo/react-hooks';
 import createApolloClient from './createApolloClient';
 import { NextPageContext, NextPage } from 'next';
-// import { AppContext } from 'next/app';
 import { ApolloClient, NormalizedCacheObject } from 'apollo-boost';
+
+interface NextPageContextWithApollo extends NextPageContext {
+  apolloClient: ApolloClient<NormalizedCacheObject> | null;
+  apolloState: NormalizedCacheObject;
+  ctx: NextPageContextApp;
+}
+
+type NextPageContextApp = NextPageContextWithApollo & AppContext;
 
 // On the client, we store the Apollo Client in the following variable.
 // This prevents the client from reinitializing between page transitions.
@@ -40,7 +47,7 @@ const initApolloClient = (
  * inside getStaticProps, getStaticPaths or getServerProps
  * @param {NextPageContext | NextAppContext} ctx
  */
-export const initOnContext = (ctx: NextPageContext): NextPageContext => {
+export const initOnContext = (ctx: NextPageContextApp): NextPageContextApp => {
   const inAppContext = Boolean(ctx.ctx);
 
   // We consider installing `withApollo({ ssr: true })` on global App level
@@ -115,7 +122,7 @@ export function withApollo({ ssr = false } = {}) {
     }
 
     if (ssr || PageComponent.getInitialProps) {
-      WithApollo.getInitialProps = async (ctx: NextPageContext): Promise<object> => {
+      WithApollo.getInitialProps = async (ctx: NextPageContextApp): Promise<object> => {
         const inAppContext = Boolean(ctx.ctx);
         const { apolloClient } = initOnContext(ctx);
 
@@ -170,7 +177,7 @@ export function withApollo({ ssr = false } = {}) {
         return {
           ...pageProps,
           // Extract query data from the Apollo store
-          apolloState: apolloClient.cache.extract(),
+          apolloState: apolloClient?.cache.extract(),
           // Provide the client for ssr. As soon as this payload
           // gets JSON.stringified it will remove itself.
           apolloClient: ctx.apolloClient,
