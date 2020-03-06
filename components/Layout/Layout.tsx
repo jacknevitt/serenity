@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import Header from '../Header/Header';
 
 type Props = {
   children: React.ReactNode;
@@ -11,6 +12,7 @@ function Layout({ children, title = 'My Site' }: Props): React.ReactElement {
       <Head>
         <title>{title}</title>
       </Head>
+      <Header />
       {children}
     </>
   );

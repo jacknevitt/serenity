@@ -1,11 +1,6 @@
 import App from 'next/app';
 import { ThemeProvider } from 'styled-components';
-
-const theme = {
-  colors: {
-    primary: '#0070f3',
-  },
-};
+import { theme } from '../theme/theme';
 
 export default class MyApp extends App {
   render(): JSX.Element {
