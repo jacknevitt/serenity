@@ -10,6 +10,8 @@ export const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
   max-width: ${({ theme }): string => (theme?.breakpoints?.large ? `${theme.breakpoints.large}px` : 'auto')};
+  padding: 0 10px;
+  box-sizing: content-box;
 `;
 
 export const TopnavContainer = styled(Container)`
